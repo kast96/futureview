@@ -4,12 +4,17 @@ import { Button } from '../../components/ui/Button/Button'
 import { BurgerIcon, LogoIcon, UserIcon } from '../../components/ui/icons/Icons'
 import s from './Header.module.scss'
 import { routes } from '../../routes'
+import { FC } from 'react'
 
-export const Header = () => {
+type PropsType = {
+  toggleIsSmallSidebar: () => void
+}
+
+export const Header: FC<PropsType> = ({toggleIsSmallSidebar}) => {
   return (
     <div className={s.container}>
       <div className={s.left}>
-        <div className={s.icon_button}>
+        <div className={s.icon_button} onClick={toggleIsSmallSidebar}>
           <BurgerIcon />
         </div>
         <Link to={routes.home} className={s.logo}>

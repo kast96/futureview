@@ -15,12 +15,12 @@ const menu = [
  {title: 'Игры', to: routes.games, icon: <GamesIcon />},
 ]
 
-export const Sidebar: FC<PropsType> = ({isSmall}) => {
+export const Sidebar: FC<PropsType> = ({isSmall = false}) => {
   return (
     <div className={[s.container, isSmall && s.small].join(' ')}>
       <div className={s.items}>
         {menu.map((item, key) => (
-          <SidebarItem key={key} icon={item.icon} title={item.title} to={item.to} isSmall />
+          <SidebarItem key={key} icon={item.icon} title={item.title} to={item.to} isSmall={isSmall} />
         ))}
       </div>
     </div>
