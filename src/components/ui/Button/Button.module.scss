@@ -1,0 +1,30 @@
+.button {
+	display: flex;
+	align-items: center;
+	background: none;
+	outline: none;
+	border: 1px solid var(--border-color);
+	color: var(--main-color);
+	font-size: 14px;
+	border-radius: 20px;
+	padding: 5px 15px;
+	box-sizing: border-box;
+	cursor: pointer;
+
+	&:hover {
+		background-color: var(--background-color-hover);
+	}
+
+	&:active {
+		background-color: var(--background-color-active);
+	}
+}
+
+.icon {
+	display: flex;
+	margin-right: 6px;
+}
+
+.text {
+
+}

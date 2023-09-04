@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+}
+
+.sidebar {
+  flex: 1;
+  padding: 0 12px;
+}
+
+.outlet {
+  padding: 0 15px;
+  min-height: 280px;
+  width: 100%;
+}

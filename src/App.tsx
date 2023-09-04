@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss'
+import { Route, Routes } from "react-router-dom"
+import { MainLayout } from "./layouts/MainLayout"
+import { routes } from "./routes"
+import { Home } from './pages/Home'
+import { Films } from './pages/Films'
+import { Series } from './pages/Series'
+import { Games } from './pages/Games'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<Routes>
+			<Route path={routes.home} element={<MainLayout />}>
+				<Route path="" element={<Home />} />
+				<Route path={routes.films} element={<Films />} />
+				<Route path={routes.series} element={<Series />} />
+				<Route path={routes.games} element={<Games />} />
+				<Route path="*" element={<div>404 Страница не найдена</div>} />
+			</Route>
+		</Routes>
+	)
 }
 
-export default App;
+export default App

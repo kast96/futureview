@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  align-items: center;
+  color: var(--color);
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 12px;
+
+  &:global(.active),
+  &:hover {
+    background-color: var(--background-color-hover);
+  }
+}
+
+.icon {
+  margin-right: 24px;
+}
+
+.title {
+  font-size: 14px;
+}
+
+.small {
+  display: block;
+  text-align: center;
+  padding: 16px 0;
+  margin-bottom: 3px;
+
+  .icon {
+    margin: 0;
+  }
+
+  .title {
+    font-size: 11px;
+  }
+}

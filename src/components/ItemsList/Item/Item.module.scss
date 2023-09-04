@@ -1,0 +1,52 @@
+.container {
+  width: 400px;
+  height: 100%;
+}
+
+.image_container {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  background-color: var(--color-preloader);
+  border-radius: 10px;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+.image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.viewed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 0;
+  font-weight: 700;
+}
+
+.viewed:hover {
+  font-size: 18px;
+  background-color: var(--main-color-alpha);
+}
+
+.viewed_done {
+  background-color: #0006;
+}
+
+.title {
+  margin-bottom: 4px;
+}
+
+.category {
+  font-size: 14px;
+  color: var(--color-darken);
+}
