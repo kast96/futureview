@@ -1,20 +1,27 @@
 import { FC } from 'react'
 import { Item } from './Item/Item'
 import s from './ItemsList.module.scss'
-import { ItemType } from '../../types/types'
+import { ItemTypeResponse } from '../../types/types'
 
 type PropsType = {
-  items: Array<ItemType>
+  items: Array<ItemTypeResponse>
 }
 
 export const ItemsList: FC<PropsType> = ({items}) => {
-  items.sort((a, b) => {
+  let itemsSort = [...items]
+
+  itemsSort.sort((a, b) => {
     return a.isViewed > b.isViewed ? 1 : -1
   })
   
   return (
     <div className={s.container}>
-      {items.map((item, key) => <Item key={key} title={item.title} category={item.category} image={item.image} isViewed={item.isViewed} />)}
+      {!itemsSort.length && <div>Элементы не найдены</div>}
+      {!!itemsSort.length &&
+        <>
+          {itemsSort.map((item, key) => <Item key={key} _id={item._id} title={item.title} category={item.category} image={item.image} isViewed={item.isViewed} />)}
+        </>
+      }
     </div>
   )
 }

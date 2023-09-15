@@ -108,3 +108,29 @@ export const GamesIcon: FC<IconProps> = ({className}) => (
 		<path d="M10 12H8v2H6v-2H4v-2h2V8h2v2h2v2zm7 .5c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5.67 1.5 1.5 1.5 1.5-.67 1.5-1.5zm3-3c0-.83-.67-1.5-1.5-1.5S17 8.67 17 9.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5zm-3.03-4.35-4.5 2.53-.49.27-.49-.27-4.5-2.53L3 7.39v6.43l8.98 5.04 8.98-5.04V7.39l-3.99-2.24m0-1.15 4.99 2.8v7.6L11.98 20 2 14.4V6.8L6.99 4l4.99 2.8L16.97 4z" />
 	</svg>
 )
+
+export const PlusIcon: FC<IconProps> = ({className}) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={24}
+		height={24}
+		fill={'currentColor'}
+		viewBox="0 0 448 512"
+		className={className}
+  >
+    <path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32v144H48c-17.7 0-32 14.3-32 32s14.3 32 32 32h144v144c0 17.7 14.3 32 32 32s32-14.3 32-32V288h144c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z" />
+  </svg>
+)
+
+export const TrashIcon: FC<IconProps> = ({className}) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={24}
+		height={24}
+		fill={'currentColor'}
+		viewBox="0 0 448 512"
+		className={className}
+  >
+    <path d="M135.2 17.7 128 32H32C14.3 32 0 46.3 0 64s14.3 32 32 32h384c17.7 0 32-14.3 32-32s-14.3-32-32-32h-96l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32l21.2 339c1.6 25.3 22.6 45 47.9 45h245.8c25.3 0 46.3-19.7 47.9-45L416 128z" />
+  </svg>
+)

@@ -50,3 +50,31 @@
   font-size: 14px;
   color: var(--color-darken);
 }
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.remove {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: var(--color-darken);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--color);
+  background-color: var(--background-color-hover);
+  }
+
+  svg {
+    width: 16px;
+  }
+}

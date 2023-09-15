@@ -3,6 +3,7 @@ import { Outlet } from "react-router-dom"
 import { Header } from "./Header/Header"
 import { Sidebar } from "./Sidebar/Sidebar"
 import { useState } from "react"
+import { AddForm } from "../components/AddForm/AddForm"
 
 export const MainLayout = () => {
 	const [isSmallSidebar, setIsSmallSidebar] = useState<boolean>(false)
@@ -23,6 +24,7 @@ export const MainLayout = () => {
 				</div>
 			</div>
 			{/*<Footer />*/}
+			<AddForm />
 		</>
 	)
 }
